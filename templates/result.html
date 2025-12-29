@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Match Score</h2>
+    <div class="score">{{ result.score }}%</div>
+
+    <h3>Matched Skills</h3>
+    <ul>
+        {% for skill in result.matched %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Missing Skills</h3>
+    <ul>
+        {% for skill in result.missing %}
+        <li>
+            {{ skill }} – {{ result.reasons[skill] }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>

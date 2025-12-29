@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analyze Resume</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/analyzer">Analyzer</a>
+    <a href="/about">About</a>
+</nav>
+
+<div class="container">
+    <h2>Resume Analyzer</h2>
+
+    <form method="POST" action="/analyze">
+        <label>Paste Resume</label>
+        <textarea name="resume" required></textarea>
+
+        <label>Paste Job Description</label>
+        <textarea name="job" required></textarea>
+
+        <button type="submit">Analyze</button>
+    </form>
+</div>
+
+</body>
+</html>
